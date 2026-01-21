@@ -17,7 +17,7 @@ ghidra_projects = [f'parser_{i}/' for i in range(10)]
 
 def process_unstripped_binary(ghidra_path, project_path, project_name, binary_path):
     print(f"[*] hold {project_name} for {binary_path}")
-    cmd = f"{ghidra_path} {project_path} {project_name} -import {binary_path} -readOnly -postScript ./decompilation/decomp_for_unstripped.py"
+    cmd = f"{ghidra_path} {project_path} {project_name} -import {binary_path} -readOnly -postScript ./decompilation/cg_extractor_for_unstripped.py"
     try:
         subprocess.run(cmd, shell=True, timeout=900*4)
     except subprocess.TimeoutExpired:
@@ -28,7 +28,7 @@ def process_unstripped_binary(ghidra_path, project_path, project_name, binary_pa
 
 def process_stripped_binary(ghidra_path, project_path, project_name, binary_path):
     print(f"[*] hold {project_name} for {binary_path}")
-    cmd = f"{ghidra_path} {project_path} {project_name} -import {binary_path} -readOnly -postScript ./decompilation/decomp_for_stripped.py"
+    cmd = f"{ghidra_path} {project_path} {project_name} -import {binary_path} -readOnly -postScript ./decompilation/cg_extractor_for_stripped.py"
     try:
         subprocess.run(cmd, shell=True, timeout=900*4)
     except subprocess.TimeoutExpired:
