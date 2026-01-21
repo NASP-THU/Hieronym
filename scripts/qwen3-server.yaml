@@ -1,0 +1,10 @@
+model: Qwen/Qwen3-Coder-30B-A3B-Instruct
+served_model_name: qwen3-coder
+host: 127.0.0.1
+port: 8080
+tensor-parallel-size: 8
+gpu-memory-utilization: 0.9
+enable-expert-parallel: true
+enable-auto-tool-choice: true
+tool-call-parser: qwen3_coder
+max-model-len: 32000
