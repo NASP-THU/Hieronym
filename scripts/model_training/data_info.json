@@ -1,0 +1,15 @@
+{
+    "rename_data": {
+        "file_name": "training_dataset.json",
+        "formatting": "sharegpt",
+        "columns": {
+          "messages": "conversations"
+        },
+        "tags": {
+          "role_tag": "role",
+          "content_tag": "content",
+          "user_tag": "user",
+          "assistant_tag": "assistant"
+        }
+      }
+}

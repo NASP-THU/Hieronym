@@ -1,0 +1,48 @@
+### model
+model_name_or_path: codellama/CodeLlama-34b-Instruct-hf
+trust_remote_code: true
+
+### method
+stage: sft
+do_train: true
+finetuning_type: lora
+lora_rank: 16
+lora_appha: 16
+lora_dropout: 0.05
+lora_target: ['q_proj','v_proj']
+
+### dataset
+dataset: rename_data
+template: llama2
+cutoff_len: 4096
+train_on_prompt: true
+max_samples: 100000000
+preprocessing_num_workers: 64
+dataloader_num_workers: 32
+
+### output
+output_dir: saves/codellama-34b/lora/sft
+logging_steps: 10
+save_steps: 200
+plot_loss: true
+overwrite_output_dir: true
+save_only_model: false
+report_to: none  # choices: [none, wandb, tensorboard, swanlab, mlflow]
+
+### train
+per_device_train_batch_size: 1
+gradient_accumulation_steps: 16
+learning_rate: 3.0e-4
+num_train_epochs: 4.0
+lr_scheduler_type: cosine
+warmup_ratio: 0.1
+bf16: true
+ddp_timeout: 180000000
+resume_from_checkpoint: null
+
+### eval
+# eval_dataset: alpaca_en_demo
+# val_size: 0.1
+# per_device_eval_batch_size: 1
+# eval_strategy: steps
+# eval_steps: 500
