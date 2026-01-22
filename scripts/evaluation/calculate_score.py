@@ -109,8 +109,8 @@ class Evaluation:
                     )
                     forward_match = abbreviation_matcher.match(full_form=clean_full_form, abbreviation=clean_abbrev_form)
                     reverse_match = abbreviation_matcher.match(full_form=clean_abbrev_form, abbreviation=clean_full_form)
-                    valid_match1 = forward_match.confidence>=0.65 and (len(forward_match.match_positions>=3))
-                    valid_match2 = reverse_match.confidence >= 0.65 and (len(reverse_match.match_positions >= 3))
+                    valid_match1 = forward_match.confidence>=0.65 and (len(forward_match.match_positions)>=3)
+                    valid_match2 = reverse_match.confidence >= 0.65 and (len(reverse_match.match_positions) >= 3)
                     if valid_match1 or valid_match2:
                         return True
         except Exception as e:
