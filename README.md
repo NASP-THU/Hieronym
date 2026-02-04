@@ -156,7 +156,7 @@ python data_processing/binary_information_extract.py \
 This step requires vLLM. First, launch the vLLM server using Qwen3-Coder. Update `tensor-parallel-size` in `qwen3-server.yaml` (requires 4 or 8 GPUs).
 
 ```bash
-vllm server --config qwen3-server.yaml
+vllm serve --config qwen3-server.yaml
 ```
 
 Then update `VLLM_API_URL` and `VLLM_MODEL_NAME` in `data_processing/generate_global_binary_context.py`.
