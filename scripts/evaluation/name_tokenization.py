@@ -244,7 +244,7 @@ def demangle_in_text(text):
     return results
 
 
-def batched_src_functions(results):
+def batched_functions(results):
     datasets = []
 
     for result in results:
@@ -285,7 +285,7 @@ async def main_async(
     with open(input_file, 'r', encoding='utf-8') as f:
         source_functions = json.load(f)
 
-    source_functions = batched_src_functions(source_functions)
+    source_functions = batched_functions(source_functions)
 
     system_prompt = ""
     prompt_path = './evaluation/prompt/name_tokenization'
