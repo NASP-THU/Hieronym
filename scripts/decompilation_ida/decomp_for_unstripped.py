@@ -89,7 +89,7 @@ def main():
 
     assert (
         OUTPUT_BASE
-    ), "Please provide the dir to save the results in 'decompilation_ida/decom_for_unstripped.py'"
+    ), "Please provide the dir to save the results in 'decompilation_ida/decomp_for_unstripped.py'"
 
 
     output_dir = '/'.join(file_path.split('/')[-4:-1])
