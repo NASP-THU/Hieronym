@@ -88,7 +88,7 @@ def main():
 
     assert (
         OUTPUT_BASE
-    ), "Please provide the dir to save the results in 'decompilation_ida/decom_for_stripped.py'"
+    ), "Please provide the dir to save the results in 'decompilation_ida/decomp_for_stripped.py'"
 
     output_dir = '/'.join(file_path.split('/')[-4:-1])
     output_dir = os.path.join(OUTPUT_BASE, output_dir)
