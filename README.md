@@ -332,7 +332,7 @@ Based on **LlamaFactory**. We provide `LlamaFactory.zip` in `model_training/`.
 llamafactory-cli train examples/train_lora/fine_tuning.yaml
 ```
 
-> Pre-trained LoRA weights are available in `lora_weights/`.
+> Pre-trained LoRA weights are available in `lora_weights/`. The anonymous github does not support Git-LFS, preventing model download. We provide an alternative via https://www.dropbox.com/scl/fi/enmyqsrmj1fqrd7cjvfju/lora_weights.zip?rlkey=6q887k67rnja5yvunlvjclih7&st=dixvo748&dl=0.
 
 #### 5.2 Predict
 
