@@ -25,7 +25,7 @@ def process_binary_file(args):
         samples = []
         
 
-        with open(file_path) as f:
+        with open(file_path, 'r') as f:
             json_data = json.load(f)
 
         for function_name, func_body in json_data.items():
