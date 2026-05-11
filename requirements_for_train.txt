@@ -19,6 +19,8 @@ intervaltree
 langchain
 langgraph
 llamafactory
+uv
+vllm>=0.10.1.1
 nltk
 torch
 openai
@@ -31,5 +33,3 @@ tokenizers
 transformers
 tree-sitter
 tree-sitter-cpp
-uv
-vllm>=0.10.1.1
