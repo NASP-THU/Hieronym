@@ -232,10 +232,6 @@ def process_binary(stripped_binary_path, out_path):
     except Exception as e:
         print(f"Error analyzing: {stripped_binary_path}, error_info: {e}")
 
-
- 
-
-
 if __name__ == "__main__":
     parser = argparse.ArgumentParser(description='Process stripped binaries and extract binary information.')
     parser.add_argument('-i', '--input_path', type=str, required=True,
