@@ -1,5 +1,13 @@
 # Hieronym
 
+The implementation of the paper titled "Hieronym: Leveraging Hierarchical Multi-Source Information for Function Renaming in Stripped Binary"
+
+Hieronym is an automated framework for function renaming in binary programs. Hieronym leverages global binary context and local calling context to improve renaming performance, while providing a sound and robust evaluation that aligns with human judgment.
+
+For more details, please refer to our paper from ACM CCS'26.
+
+Due to page limitations, the Appendix of the paper could not be included within the main text. Please refer to [Appendix](https://arxiv.org/html/2609.12457v1).
+
 ## Repository Contents
 
 This repository contains the source code and scripts for **Hieronym**, a novel approach for renaming functions in stripped binaries. Hieronym is implemented using:
